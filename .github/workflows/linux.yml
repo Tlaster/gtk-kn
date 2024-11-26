@@ -39,6 +39,9 @@ jobs:
         sudo apt-get clean
 
     - name: Build with Gradle
+      env:
+        OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
       run: |
         ./gradlew :gir:run
         ./gradlew assemble
