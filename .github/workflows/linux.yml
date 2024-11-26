@@ -39,4 +39,9 @@ jobs:
         sudo apt-get clean
 
     - name: Build with Gradle
-      run: ./gradlew gradle-plugin:publishToMavenLocal publishToMavenLocal
+      run: |
+        ./gradlew :gir:run
+        ./gradlew assemble
+        ./gradlew gradle-plugin:publishAllPublicationsToSnapshotsRepository
+        ./gradlew publishAllPublicationsToSnapshotsRepository
+
