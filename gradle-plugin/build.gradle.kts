@@ -52,7 +52,7 @@ gradlePlugin {
     vcsUrl = config.vcsUrl.get()
     plugins {
         register("gtk") {
-            id = "org.gtkkn.gtk"
+            id = "moe.tlaster.gtkkn.gtk"
             displayName = "GTK Gradle Plugin"
             description = "GTK Gradle plugin for easy configuration"
             tags = listOf("ui-framework")
