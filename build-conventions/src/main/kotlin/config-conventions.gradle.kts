@@ -36,7 +36,7 @@ plugins {
     id("local-properties-convention")
 }
 
-group = "org.gtkkn"
+group = "moe.tlaster.gtkkn"
 
 extensions.create<ConfigExt>("config").apply {
     website.convention("http://gtk-kn.org/")
