@@ -41,8 +41,10 @@ includeBuild("build-conventions")
 includeBuild("gradle-plugin")
 
 include("gir")
+include("coroutines")
 
 include("bindings:common")
+include("bindings:common-annotations")
 
 var configFile: String = if (properties.contains("org.gtkkn.configFile")) {
     checkNotNull(properties["org.gtkkn.configFile"])

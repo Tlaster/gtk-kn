@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 /*
  * Copyright (c) 2024 gtk-kn
  *
@@ -22,4 +24,11 @@ plugins {
 version = config.versions.common.get()
 
 kotlin {
+    sourceSets {
+        nativeMain {
+            dependencies {
+                api(projects.bindings.commonAnnotations)
+            }
+        }
+    }
 }
